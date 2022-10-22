@@ -174,7 +174,12 @@ class DecisionTree:
         # Set that as the feature for the root
         root_node = Node(best_feature)
 
+        print(type(self.types))
+        print(self.types[best_feature])
+        print(best_feature)
         types = self.types[best_feature]
+
+
         for t in types:
             if df[df[best_feature] == t][self.label].count() == 0:
                 # if S_v is empty, add leaf node with the most common value of label in S
@@ -352,4 +357,4 @@ def Question_3():
 
 
 Question_2()
-Question_3()
+#Question_3()
